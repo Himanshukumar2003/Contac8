@@ -14,16 +14,14 @@ export default function CategoryExplorer() {
     { name: "BRAKE\nDISKS &\nPADS", image: "/img/category/collection-6.png" },
     { name: "ENERGY\nPARTS", image: "/img/category/collection-7.webp" },
     { name: "FURNITURE\nPARTS", image: "/img/category/collection-8.webp" },
-    { name: "OIL &\nLUBRICANTS", image: "/img/category/collection-9.png" },
-    { name: "SUSPENSION\nPARTS", image: "/img/category/collection-1.webp" },
   ];
 
   const [showAll, setShowAll] = useState(false);
   const initialDisplayLimit = 15;
 
   return (
-    <section className="w-full  section">
-      <div className="container px-4 md:px-6">
+    <section className="  section">
+      <div className="container max-w-7xl px-4 mx-auto">
         <h2
           className="text-2xl md:text-3xl lg:text-4xl font-extrabold 
             tracking-tight text-black mb-8 md:mb-12"
@@ -32,7 +30,7 @@ export default function CategoryExplorer() {
         </h2>
 
         {/* GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-4">
           {(showAll
             ? categories
             : categories.slice(0, initialDisplayLimit)
